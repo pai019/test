@@ -1,0 +1,701 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: "Noto Sans KR", sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0; /* 헤더를 맨 위에 고정 */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1440px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+#menu {
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    
+}
+
+#menu ul {
+    list-style-type: none;
+    margin-top: 8px;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+}
+
+#menu ul li {
+    list-style: none;
+    user-select: none;
+    padding: 11px 100px;
+}
+
+
+#menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+    font-weight: 500;
+    position: relative;
+}
+
+#menu ul li a:hover {
+    color: rgb(176, 176, 176);
+}
+
+#menu ul li a.active::before{
+    content: "▶";
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#menu ul li a.active::after{
+    content: "▶";
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+#menu ul li a.active::before {
+    left: -20px;
+}
+
+#menu ul li a.active::after {
+    right: -20px;
+}
+
+
+#row {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.col6 {
+    width: 100%;
+    padding: 1rem;
+}
+
+.text-menu {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+
+/*index--------------------------------------------*/
+section{
+    width: 1440px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.mainText{
+    margin-top: 120px;
+    margin-left: 80px;
+    font-size: 5.7rem;
+    font-weight: 700;
+}
+
+.highlight {
+    padding: 0 1px;
+    color: rgb(255, 255, 255);
+    background-color: black; /* 패딩 값을 조절하여 높이를 줄임 */
+}
+
+.mainBox{
+    display: flex;
+    flex-direction: column;
+}
+
+.help{
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.mainBox2{
+    margin-left: 80px;
+}
+
+.image-container {
+    z-index: -1;
+    margin-top: -130px;
+    float: right;
+    margin-left: 70px; /* 텍스트와 이미지 사이의 간격 */
+}
+
+
+.subText{
+    width: 700px;
+    margin-top: 40px;
+    font-size: 2rem;
+    font-weight: 500;
+    
+}
+
+.subText2{
+    width: 690px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+.subBox{
+    display: flex;
+    flex-direction: row;
+}
+
+a{
+    color:#b49bbc;
+    text-decoration: none;
+}
+
+.Shortcut{
+    color:#b49bbc;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 50px;
+}
+
+.Shortcut2{
+    color:#b49bbc;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.line{
+    margin: 80px;
+    margin-top: 40px;
+    border-bottom: 1px;
+    border-width: 0.3px;
+    border-style: solid;
+    border-color: black;
+}
+
+.arrowText{
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+
+.howBox {
+    float: right;
+    position: relative;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-top: 40px;
+    margin-left: 170px;
+    width: 424px;
+    height: 480px;
+}
+
+.black-box {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    cursor: pointer;
+}
+
+.background-text {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: left;
+    flex-direction: column;
+    color: black;
+    opacity: 0;
+    margin: 5px;
+    transition: opacity 0.5s ease;
+}
+
+.howBox:hover .black-box {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.howBox:hover .background-text {
+    opacity: 1;
+}
+
+/*harmful page-------------------------------------*/
+.mainBox3{
+    margin-top: 120px;
+    margin-left: 80px;
+    margin-right: 80px;
+    
+}
+
+.hoverBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 10px; /* 상자 사이의 간격을 추가합니다 */
+}
+
+.howBox2 {
+    float: right;
+    position: relative;
+    justify-content: space-between;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-top: 40px;
+    width: 424px;
+    height: 480px;
+}
+
+.background-text2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    opacity: 0;
+    margin: 5px;
+    transition: opacity 0.5s ease;
+}
+
+.howBox2:hover .black-box {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.howBox2:hover .background-text2 {
+    opacity: 1;
+}
+
+.standard{
+    color: #a2a2a2;
+    font-size: 1.9rem;
+    font-weight: 500;
+}
+
+.mainBox4{
+    margin-left: 80px;
+    margin-right: 80px;
+}
+
+.harmfulPhoto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px; /*세로*/
+    font-size: 1.85rem;
+    font-weight: 500;
+}
+
+.photoShort{
+    gap: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.hPhoto{
+    margin-top: 40px;
+}
+
+.photoRow{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+}
+
+.arrowText2{
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-top: 100px;
+}
+
+/*measures page-------------------------------------*/
+.page3MainText{
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+.plane{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    margin-top: 160px;
+    margin-bottom: 160px;
+}
+
+.Shortcut3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#b49bbc;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 160px;
+}
+
+.measuresBox{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.measuressub{
+    display: flex;
+    flex-direction: column;
+}
+
+.measuressub p{
+    margin-top: 20px;
+    font-size: 2.2rem;
+    font-weight: 500;
+}
+
+#subsub{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #a2a2a2;
+}
+
+.howBox3 {
+    position: relative;
+    font-size: 2.1rem;
+    font-weight: 700;
+    margin-top: 40px;
+    width: 600px;
+    height: 95px;
+}
+
+.black-box2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.news{
+    margin-top: 80px;
+}
+
+.news2{
+    margin-top: 20px;
+}
+
+
+.imageBox {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.lastBox3 {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.imageText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 2.7rem;
+    font-weight: 500;
+}
+
+.imageText3 {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 2.3rem;
+    font-weight: 500;
+
+}
+
+.imageText2{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 40px;
+}
+
+.imageText4{
+    font-size: 1.6rem;
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+
+.linkSub{
+    color: rgb(199, 199, 199);
+}
+
+.lastBox{
+    display: flex;
+    flex-direction: row;
+}
+
+.lastBox2{
+    margin-top: 20px;
+    margin-right: 80px;
+    font-size: 2.1rem;
+    font-weight: 500;
+}
+
+.page4MainText{
+    margin-top: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: 900;
+}
+
+
+
+.textarea-container {
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 50px;
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textarea-container textarea {
+    flex: 1;
+    height: 38px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    resize: none;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    border-radius:30px;
+}
+
+.textarea-container .placeholder {
+    position: absolute;
+    top: 0;
+    left: 5px;
+ /* Space for the button */
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    color: #ccc; /* Light grey color for placeholder text */
+    font-size: 16px;
+    padding: 10px;
+}
+
+.submit-btn {
+    position: absolute;
+    right: 10px;
+    background-color:#b49bbc;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+    height: calc(100% - 20px); /* Adjust height to match the textarea height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.textarea-container .submit-btn:hover {
+    background-color:#b49bbc;
+}
+
+
+.bubleBox{
+    width: 1440px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    overflow: hidden;
+
+    white-space: nowrap
+}
+
+.bubleBox1{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    overflow: hidden;
+    gap: 40px;
+}
+
+.bubleBox2{
+    display: flex;
+    flex-direction: row;
+    margin-left: -100px;
+    overflow: hidden;
+    gap: 40px;
+}
+
+.imageText5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+
+/*
+
+
+#myContainer{
+    margin-top: 80px;
+    left: 0px;
+    top: 0px;
+    width: 100vw;
+}
+
+.box{
+    width: 100%;
+    height: 3.8vmax;
+    display: flex;
+}
+
+.mytext{
+    position: absolute;
+    width: 100%;
+    color: #000000;
+    font-size:1.4vmax;
+}
+
+.mytext2{
+    position: absolute;
+    width: 100%;
+    left: 100%;
+    color: #000000;
+    font-size:1.4vmax;
+}
+
+.mytext3{
+    position: absolute;
+    width: 100%;
+    left: -100%;
+    color: #000000;
+    font-size:1.4vmax;
+}
+
+.mytext p, .mytext2 p, .mytext3 p{
+
+    width: 100%;
+}
+
+.textAniA{
+    animation: moveLeft 10s linear 0s infinite;
+}
+
+@keyframes moveLeft{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+.textAniB{
+    animation: moveRight 10s linear 0s infinite;
+}
+
+@keyframes moveRight{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(100%);
+    }
+}
+*/
+
+
+
+.footer {
+    background-color: #000000; /* 배경색 */
+    margin-top: 70px;
+    height: 170px;
+    position: relative;
+    bottom: 0px; /* 하단에 위치 */
+}
+
+.footerText{
+    color: rgb(195, 195, 195); /* 텍스트 색상 */
+    text-align: left; /* 텍스트 정렬 */
+    margin-left: 80px;
+    margin-top: 40px;
+    font-size: 1rem;
+    font-weight: 500;
+}

@@ -10,21 +10,4 @@ document.querySelectorAll('#menu ul li a').forEach(link => {
     });
 });
 
-const opinionTextarea = document.getElementById('opinion');
-const placeholderDiv = document.getElementById('placeholder');
-
-opinionTextarea.addEventListener('input', function() {
-    placeholderDiv.style.display = this.value ? 'none' : 'flex';
-});
-
-function submitOpinion() {
-    var opinion = document.getElementById('opinion').value;
-    if (opinion.trim() === '') {
-        alert('의견을 입력해 주세요.');
-        return;
-    }
-    alert('의견이 제출되었습니다. 감사합니다!');
-    document.getElementById('opinion').value = ''; // Clear the textarea after submission
-    placeholderDiv.style.display = 'flex'; // Show the placeholder again
-}
 
